@@ -3,75 +3,74 @@
 \moderncvstyle{casual}
 \moderncvcolor{blue}
 
-\usepackage{fontspec}
-\setmainfont{CMU Serif}
-\setsansfont{CMU Sans Serif}
-\defaultfontfeatures{Ligatures=TeX}
-\usepackage{polyglossia}
-\usepackage[autostyle=true]{csquotes}
-\setdefaultlanguage{russian}
-\setotherlanguage{english}
-\frenchspacing{}
+\usepackage{pdfpages}
 
 \usepackage[scale=0.75]{geometry}
 \setlength{\footskip}{54.40001pt}
 
-\name{Александр}{Старовойтов}
-\born{29.04.2003}
-\phone{+7~(915)~064~02~81}
+\name{Alexander}{Starovoytov}
 \email{stewk6@gmail.com}
 
 \social[github]{stewkk}
 \social[telegram]{stewkk}
-% \extrainfo{additional information}
 
 \begin{document}
 
 \makecvtitle{}
 
-\section{Образование}
+\section{Education}
 
-\cventry{2010--2017}{Музыкальная школа}{ДМШ №3}{Сочи}{}{Фортепиано}
-\cventry{2017--2021}{Школа}{Бауманская инженерная школа № 1580 (при МГТУ им. Баумана)}{Москва}{}{Информационный профиль}
-\cventry{2021--2025}{Бакалавриат}{МГТУ им. Баумана}{Москва}{}{ИУ9, ``Теоретическая информатика и компьютерные технологии''}
+\cventry{2017--2021}{High school}{Baumanskaya Engineering School №1580}{Moscow}{}{IT-class}
+\cventry{2021--2025}{Undergraduate school}{BMSTU}{Moscow}{}{IU9, ``Department of Computer Science and Technologies''}
 
-\section{Языки}
-\cvitemwithcomment{Русский}{}{}
-\cvitemwithcomment{English}{}{свободное чтение технической документации}
+\section{Languages}
 
-\section{Навыки}
+\cvlanguage{Russian}{}{native}
+\cvlanguage{English}{B1-B2}{free reading of technical documentation}
 
-\setcvskilllegendcolumns[][0.6]
-\cvskillplainlegend[0.2em][читаю код][][уверенно использую в учебе][][реализовал проект в промышленной разработке]{Легенда}
+\section{Hard skills}
 
-\cvskillhead[-0.1em][Уровень][Навык][Лет][Комментарий]
+\cvskillhead[-0.1em][Level][Skill][Years][Commentary]
 
-\cvskillentry*{ЯП:}{4}{C}{1}{Изучал в университете.}
-\cvskillentry{}{3}{C++}{4}{Любимый язык. Изучал в школе, на курсах. Активно использую в олимпиадном программировании и личных проектах.}
-\cvskillentry{}{3}{Python}{3}{Школа/курсы.}
-\cvskillentry{}{2}{Raku}{0}{Применял для решения ДЗ в университете.}
-\cvskillentry{}{2}{Pascal}{2}{Изучал в 8--9 классе.}
-\cvskillentry{}{3}{Bash}{2}{Использую для личных проектов.}
-\cvskillentry{}{5}{Scheme (r5rs)}{1}{Изучал в университете.}
-\cvskillentry{}{1}{Lua}{1}{}
-\cvskillentry{}{3}{\LaTeX}{2}{Активно использую в учебе.}
-\cvskillentry*{ОС:}{3}{Linux}{3}{I only use Archlinux btw}
+\cvskillentry*{LG:}{4}{C}{1}{A one semester algorithms and data structures course in university.}
+\cvskillentry{}{4}{C++}{4}{A wide experience of usage in olympiads. Also used in small projects. Learned both at school and at university. It's my main language.}
+\cvskillentry{}{2}{Python}{3}{Learned at school. Periodically using it for small CP problems.}
+\cvskillentry{}{3}{Bash}{2}{}
+\cvskillentry{}{5}{Scheme (r5rs)}{1}{Introduction to functional programming course at university.}
+\cvskillentry{}{3}{\LaTeX}{2}{Producing all of my doucuments in it.}
+\cvskillentry{}{2}{Java}{1}{University OOP course.}
+\cvskillentry{}{5}{Go}{1}{Main language at my university department. Also used it for my command project (Slavatidika).}
+\cvskillentry{}{4}{Linux}{3}{The only operating system in my house. I enjoy linux server administration as much as tinkering my notebook setup.}
+\cvskillentry{}{4}{Git}{3}{Using git on daily basis.}
+\cvskillentry{}{4}{Docker}{2}{Building my projects in docker. It also used in deployment of all services at my home server.}
 
-\newpage
+\section{Projects}
 
-\section{Курсы}
-\cventry{2018--2019}{``Олимпиадное программирование на C++''}{Бауманская инженерная школа № 1580}{}{}{Преподаватель: Партанский М.С.}
-\cventry{2020--2021}{``Tinkoff Generation Алгоритмы и структуры данных''}{}{}{}{Параллель B'}
+\cventry{2022}{Backend for
+  Slavatidika}{\href{https://github.com/bmstu-iu9/ptp2022-8-todo-list}{Github}}{}{}{Canonical
+  Go REST API with almost no external dependencies, docker
+  production/development environment, CI/CD and Postgres as database.}
 
-\section{Олимпиады}
-\cventry{2021}{№55. "Олимпиада школьников «Шаг в будущее»" ("программирование")}{2 уровень}{Диплом 1 степени}{}{}
-\cventry{2020}{№55. "Олимпиада школьников «Шаг в будущее»" ("инженерное дело")}{2 уровень}{Диплом 2 степени}{}{}
-\cventry{2020}{Региональный этап Всероссийской олимпиады школьников по информатике}{}{Участник}{}{}
-\cventry{2021}{Региональный этап Всероссийской олимпиады школьников по информатике}{}{Участник}{}{}
+\section{Special education}
+\cventry{2018--2019}{``Olympiad programming in C++''}{Baumanskaya Engineering School №1580}{}{}{Teacher: Partansky M.S.}
+\cventry{2020--2021}{``Tinkoff Generation Algorithms and data structures''}{}{}{}{Level: B'}
+\cventry{2010--2017}{Music school}{DMSH №3}{Sochi}{}{Piano}
 
+\section{Achievements}
+\cventry{2021}{№55. "Olympiad of school students «Step into the future»" (programming)}{}{winner}{}{}
+\cventry{2020}{№55. "Olympiad of school students «Step into the future»" (programming)}{}{prizewinner}{}{}
+\cventry{2020}{All-Russian Informatics Olympiad, regional stage}{}{Participant}{}{}
+\cventry{2021}{All-Russian Informatics Olympiad, regional stage}{}{Participant}{}{}
 
-\section{Хобби}
-\cvitem{Большой теннис}{Тренируюсь 6 часов в неделю, с 13 лет.}
-\cvitem{Linux}{В свободное время люблю играться с домашним Linux-сервером. Ежедневно пользуюсь Arch Linux на своем ноутбуке.}
+\section{My free time}
+
+In my spare time I usually enjoy:
+
+\cvlistitem{tennis}
+\cvlistitem{board games}
+\cvlistitem{anime}
+
+\includepdf[pages={1}]{color.pdf}
+\includepdf[pages={1}]{color2.pdf}
 
 \end{document}
