@@ -1,76 +1,224 @@
-\documentclass[11pt,a4paper,sans]{moderncv}
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-\moderncvstyle{casual}
-\moderncvcolor{blue}
+\documentclass[letterpaper,11pt]{article}
 
-\usepackage{pdfpages}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+% \usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
-\usepackage[scale=0.75]{geometry}
-\setlength{\footskip}{54.40001pt}
 
-\name{Alexander}{Starovoytov}
-\email{stewk6@gmail.com}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
 
-\social[github]{stewkk}
-\social[telegram]{stewkk}
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-\makecvtitle{}
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
 
-\section{Education}
+\begin{center}
+    \textbf{\Huge \scshape Старовойтов Александр} \\ \vspace{1pt}
+    % \small 123-456-7890 $|$
+    \href{mailto:x@x.com}{Email: \underline{aistarovoytov@yandex.ru}} $|$
+    \href{https://t.me/stewkk}{Telegram: @\underline{stewkk}} $|$
+    % \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
+    \href{https://github.com/stewkk}{GitHub: \underline{stewkk}}
+\end{center}
 
-\cventry{2017--2021}{High school}{Baumanskaya Engineering School №1580}{Moscow}{}{IT-class}
-\cventry{2021--2025}{Undergraduate school}{BMSTU}{Moscow}{}{IU9, ``Department of Computer Science and Technologies''}
 
-\section{Languages}
+%-----------EXPERIENCE-----------
+\section{Опыт работы}
+  \resumeSubHeadingListStart
 
-\cvlanguage{Russian}{}{native}
-\cvlanguage{English}{B1-B2}{free reading of technical documentation}
+    \resumeSubheading
+      {Junior C++ Разработчик}{июнь 2023 -- август 2024}
+      {Яндекс, Ridetech, Разработка эффективности водительских продуктов}{Москва, Россия}
+      \resumeItemListStart
+        \resumeItem{Реализовал и запустил проект по рассылкам в WhatsApp (экономит 50\% бюджета)}
+        \resumeItem{Реализовал и запустил эксперимент по геймифицированной раздаче субсидий}
+        \resumeItem{Улучшил мониторинг: новая система алертов, дашборды}
+        \resumeItem{Распиливал сложные поллинговые ручки и переводил на событийную модель}
+      \resumeItemListEnd
 
-\section{Hard skills}
+    \resumeSubheading
+      {Intern C++ Разработчик}{январь 2023 -- июнь 2023}
+      {Яндекс, Ridetech, Группа разработки алгоритмов назначения}{Москва, Россия}
+      \resumeItemListStart
+        \resumeItem{Улучшал сервис для решения Vehicle Routing Problem}
+        \resumeItem{Реализовал и запустил флоу полевого ремонта самокатов}
+        \resumeItem{Избавился от петель в маршрутах автомобильных исполнителей}
+        \resumeItem{Оптимизировал решение задачи коммивояжёра с 30+ минут до <2 минут}
+      \resumeItemListEnd
 
-\cvskillhead[-0.1em][Level][Skill][Years][Commentary]
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
 
-\cvskillentry*{LG:}{4}{C}{1}{A one semester algorithms and data structures course in university.}
-\cvskillentry{}{4}{C++}{4}{A wide experience of usage in olympiads. Also used in small projects. Learned both at school and at university. It's my main language.}
-\cvskillentry{}{2}{Python}{3}{Learned at school. Periodically using it for small CP problems.}
-\cvskillentry{}{3}{Bash}{2}{}
-\cvskillentry{}{5}{Scheme (r5rs)}{1}{Introduction to functional programming course at university.}
-\cvskillentry{}{3}{\LaTeX}{2}{Producing all of my doucuments in it.}
-\cvskillentry{}{2}{Java}{1}{University OOP course.}
-\cvskillentry{}{5}{Go}{1}{Main language at my university department. Also used it for my command project (Slavatidika).}
-\cvskillentry{}{4}{Linux}{3}{The only operating system in my house. I enjoy linux server administration as much as tinkering my notebook setup.}
-\cvskillentry{}{4}{Git}{3}{Using git on daily basis.}
-\cvskillentry{}{4}{Docker}{2}{Building my projects in docker. It also used in deployment of all services at my home server.}
 
-\section{Projects}
+  \resumeSubHeadingListEnd
 
-\cventry{2022}{Backend for
-  Slavatidika}{\href{https://github.com/bmstu-iu9/ptp2022-8-todo-list}{Github}}{}{}{Canonical
-  Go REST API with almost no external dependencies, docker
-  production/development environment, CI/CD and Postgres as database.}
+%-----------EDUCATION-----------
+\section{Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {МГТУ имени Н.Э. Баумана}{Москва, Россия}
+      {Бакалавриат, прикладная математика и информатика}{2021 -- 2026}
+  \resumeSubHeadingListEnd
 
-\section{Special education}
-\cventry{2018--2019}{``Olympiad programming in C++''}{Baumanskaya Engineering School №1580}{}{}{Teacher: Partansky M.S.}
-\cventry{2020--2021}{``Tinkoff Generation Algorithms and data structures''}{}{}{}{Level: B'}
-\cventry{2010--2017}{Music school}{DMSH №3}{Sochi}{}{Piano}
+%-----------PROJECTS-----------
+\section{Проекты}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+      {\textbf{\href{https://github.com/stewkk/iu9-distributed-db}{Распределенная Key-Value СУБД}} $|$ \emph{C++, GRPC}}{май 2025 -- сентябрь 2025}
+          \resumeItemListStart
+            \resumeItem{Реализовал движок хранения на основе LSM-Tree}
+            \resumeItem{Реализовал репликацию и управление кластером при помощи ZooKeeper}
+            \resumeItem{Реализовал рандомизированные тесты на Jepsen}
+          \resumeItemListEnd
 
-\section{Achievements}
-\cventry{2021}{№55. "Olympiad of school students «Step into the future»" (programming)}{}{winner}{}{}
-\cventry{2020}{№55. "Olympiad of school students «Step into the future»" (programming)}{}{prizewinner}{}{}
-\cventry{2020}{All-Russian Informatics Olympiad, regional stage}{}{Participant}{}{}
-\cventry{2021}{All-Russian Informatics Olympiad, regional stage}{}{Participant}{}{}
+      \resumeSubheading
+          {\textbf{\href{https://github.com/stewkk/iu9-ptp}{Алгоритм нахождения идеалов в моноиде трансформаций}} $|$ \emph{C++}}{июнь 2025 -- октябрь 2025}{Институт программных систем РАН}{}
+          \resumeItemListStart
+            \resumeItem{Реализовал построение и визуализацию моноида трансформаций по таблице трансформаций}
+            \resumeItem{Разработал и реализовал эффективный алгоритм нахождения множеств всех идеалов моноида}
+          \resumeItemListEnd
 
-\section{My free time}
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/BaldiSlayer/rofl-lab1}{RAG-система для Базы Знаний по ТФЯ}} $|$ \emph{Go, PostgreSQL, Docker, ArgoCD}}{сентябрь 2024 -- декабрь 2024}
+          \resumeItemListStart
+            \resumeItem{Реализовал парсер TRS с подробными сообщениями об ошибках}
+            \resumeItem{Реализовал пайплайн обработки запросов пользователя со стейтом в PostgreSQL}
+            \resumeItem{Развернул систему из нескольких микросервисов в k3s+ArgoCD}
+          \resumeItemListEnd
 
-In my spare time I usually enjoy:
+    \resumeSubHeadingListEnd
 
-\cvlistitem{tennis}
-\cvlistitem{board games}
-\cvlistitem{anime}
+\section{Достижения}
+\begin{itemize}
+  \item Победитель перечневой олимпиады по программированию <<Шаг в будущее>>
+  \item Участник 1/8 и 1/4 ICPC
+\end{itemize}
 
-\includepdf[pages={1}]{color.pdf}
-\includepdf[pages={1}]{color2.pdf}
+\section{Дополнительное образование}
+\begin{itemize}
+  \item Школа бэкенд разработки (C++), \textit{Яндекс}
+  \item Tinkoff Generation (курсы по спортивному программированию),
+        \textit{Т-Банк}
+\end{itemize}
 
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Технические навыки}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Языки программирования}{: C++, Go, Python, SQL (Postgres)} \\
+     \textbf{Дополнительно}{: Userver, Linux, PostgreSQL, Docker, Git} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
 \end{document}
